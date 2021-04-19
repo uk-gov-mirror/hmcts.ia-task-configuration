@@ -236,6 +236,11 @@ dependencies {
     testCompile "org.junit.vintage:junit-vintage-engine:${versions.junit}"
     testCompile group: 'org.codehaus.sonar-plugins', name: 'sonar-pitest-plugin', version: versions.sonarPitest
     testImplementation libraries.junit5
+    testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', {
+        exclude group: 'junit', module: 'junit'
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+
 
     integrationTestImplementation sourceSets.main.runtimeClasspath
     integrationTestImplementation sourceSets.test.runtimeClasspath
@@ -248,10 +253,6 @@ dependencies {
     testImplementation group: 'org.camunda.bpm.assert', name: 'camunda-bpm-assert', version: '8.0.0'
     testImplementation group: 'org.camunda.bpm', name: 'camunda-engine', version: '7.14.0'
     testImplementation group: 'com.h2database', name: 'h2', version: '1.4.200'
-
-    integrationTestImplementation sourceSets.main.runtimeClasspath
-    integrationTestImplementation sourceSets.test.runtimeClasspath
-
 }
 
 mainClassName = 'uk.gov.hmcts.reform.iataskconfiguration.Application'
