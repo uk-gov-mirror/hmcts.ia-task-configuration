@@ -126,6 +126,26 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
+                "decisionWithoutHearing",
+                asList(
+                    Map.of(
+                        "taskType", "reviewRespondentResponse",
+                        "completionMode", "Auto"
+                    ),
+                    Collections.emptyMap()
+                )
+            ),
+            Arguments.of(
+                "forceCaseToPrepareForHearing",
+                asList(
+                    Map.of(
+                        "taskType", "reviewRespondentResponse",
+                        "completionMode", "Auto"
+                    ),
+                    Collections.emptyMap()
+                )
+            ),
+            Arguments.of(
                 "forceCaseToSubmitHearingRequirements",
                 asList(
                     Map.of(
@@ -166,6 +186,16 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                     ),
                     Map.of(
                         "taskType", "detainedReviewAppealSkeletonArgument",
+                        "completionMode", "Auto"
+                    ),
+                    Collections.emptyMap()
+                )
+            ),
+            Arguments.of(
+                "requestHearingRequirementsFeature",
+                asList(
+                    Map.of(
+                        "taskType", "reviewAppealSkeletonArgument",
                         "completionMode", "Auto"
                     ),
                     Collections.emptyMap()
