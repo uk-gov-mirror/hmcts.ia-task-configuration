@@ -187,7 +187,7 @@
       </rule>
       <rule id="DecisionRule_103goea">
         <inputEntry id="UnaryTests_0su2akh">
-          <text>"requestResponseAmend","requestResponseReview","decisionWithoutHearing","forceCaseToPrepareForHearing"</text>
+          <text>"requestResponseAmend","requestResponseReview","decisionWithoutHearing","forceCaseToPrepareForHearing","sendDirection"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0gfe3at">
           <text>"reviewRespondentResponse"</text>
