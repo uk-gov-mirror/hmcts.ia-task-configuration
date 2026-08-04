@@ -1807,7 +1807,8 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         assertEquals(isStf24w, desc.contains("[Decision without a hearing](/case/IA/Asylum/${[CASE_REFERENCE]}/"
                                                  + "trigger/decisionWithoutHearing)"));
         assertEquals(isStf24w, desc.contains("[Send Direction to Respondent to make changes to non-compliant Review]"
-                                                 + "(/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestResponseAmend)"));
+                                                 + "(/case/IA/Asylum/${[CASE_REFERENCE]}/"
+                                                 + "trigger/requestResponseAmend)"));
     }
 
     @ParameterizedTest
