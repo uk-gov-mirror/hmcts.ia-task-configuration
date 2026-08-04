@@ -1728,10 +1728,10 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
         assertEquals(1, descriptionList.size());
         String desc = descriptionList.getFirst().get("value").toString();
-        assertEquals(isStf24w, desc.contains("[Request hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/" +
-                                                 "trigger/requestHearingRequirementsFeature)"));
-        assertEquals(!isStf24w, desc.contains("[Request respondent review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/" +
-                                                  "requestRespondentReview)"));
+        assertEquals(isStf24w, desc.contains("[Request hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/"
+                                                 + "trigger/requestHearingRequirementsFeature)"));
+        assertEquals(!isStf24w, desc.contains("[Request respondent review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/"
+                                                  + "requestRespondentReview)"));
         assertTrue(desc.contains("[Request case edit](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestCaseEdit)"));
     }
 
@@ -1763,12 +1763,12 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
         assertEquals(1, descriptionList.size());
         String desc = descriptionList.getFirst().get("value").toString();
-        assertEquals(isStf24w, desc.contains("[Request hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/" +
-                                                 "trigger/requestHearingRequirementsFeature)"));
-        assertEquals(!isStf24w, desc.contains("[Request respondent review](/case/IA/Asylum/${[CASE_REFERENCE]}/" +
-                                                  "trigger/requestRespondentReview)"));
-        assertTrue(desc.contains("[Send direction with questions](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/" +
-                                     "sendDirectionWithQuestions)"));
+        assertEquals(isStf24w, desc.contains("[Request hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/"
+                                                 + "trigger/requestHearingRequirementsFeature)"));
+        assertEquals(!isStf24w, desc.contains("[Request respondent review](/case/IA/Asylum/${[CASE_REFERENCE]}/"
+                                                  + "trigger/requestRespondentReview)"));
+        assertTrue(desc.contains("[Send direction with questions](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/"
+                                     + "sendDirectionWithQuestions)"));
     }
 
     @ParameterizedTest
@@ -1798,16 +1798,16 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
         assertEquals(1, descriptionList.size());
         String desc = descriptionList.getFirst().get("value").toString();
-        assertEquals(!isStf24w, desc.contains("[Review Home Office response](/case/IA/Asylum/${[CASE_REFERENCE]}/" +
-                                                  "trigger/requestResponseReview)"));
-        assertEquals(!isStf24w, desc.contains("[Amend appeal response](/case/IA/Asylum/${[CASE_REFERENCE]}/" +
-                                                  "trigger/requestResponseAmend)"));
-        assertEquals(isStf24w, desc.contains("[Force case - Prepare for hearing](/case/IA/Asylum/${[CASE_REFERENCE]}/" +
-                                                 "trigger/forceCaseToPrepareForHearing)"));
-        assertEquals(isStf24w, desc.contains("[Decision without a hearing](/case/IA/Asylum/${[CASE_REFERENCE]}/" +
-                                                 "trigger/decisionWithoutHearing)"));
-        assertEquals(isStf24w, desc.contains("[Send Direction to Respondent to make changes to non-compliant Review]" +
-                                                 "(/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestResponseAmend)"));
+        assertEquals(!isStf24w, desc.contains("[Review Home Office response](/case/IA/Asylum/${[CASE_REFERENCE]}/"
+                                                  + "trigger/requestResponseReview)"));
+        assertEquals(!isStf24w, desc.contains("[Amend appeal response](/case/IA/Asylum/${[CASE_REFERENCE]}/"
+                                                  + "trigger/requestResponseAmend)"));
+        assertEquals(isStf24w, desc.contains("[Force case - Prepare for hearing](/case/IA/Asylum/${[CASE_REFERENCE]}/"
+                                                 + "trigger/forceCaseToPrepareForHearing)"));
+        assertEquals(isStf24w, desc.contains("[Decision without a hearing](/case/IA/Asylum/${[CASE_REFERENCE]}/"
+                                                 + "trigger/decisionWithoutHearing)"));
+        assertEquals(isStf24w, desc.contains("[Send Direction to Respondent to make changes to non-compliant Review]"
+                                                 + "(/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestResponseAmend)"));
     }
 
     @ParameterizedTest
